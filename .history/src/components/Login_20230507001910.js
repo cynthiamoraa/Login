@@ -1,0 +1,35 @@
+import { useEffect, useState } from "react";
+import axio from "axios";
+import { useNavigate, Link } from "react-router-dom";
+const Login = () => {
+    const [email, setEmail] = useState("");
+  return (
+    <div className="login">
+      <h1>Login</h1>
+      <form>
+        <input
+          type="email"
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
+          placeholder="email"
+        />
+        <input
+          type="password"
+          onChange={(e) => {
+            setPassword(e.target.value);
+          }}
+          placeholder="Password"
+        />
+        <input type="submit">Login</input>
+      </form>
+      <br />
+      <p>OR</p>
+      <br />
+      <Link to="/signup">Signup</Link>
+    </div>
+  );
+
+};
+
+export default Login;
