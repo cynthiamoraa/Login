@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 mongoose.connect(
   "mongodb+srv://cmoraa734:login@cluster0.yd9noon.mongodb.net/"
 )
@@ -18,4 +18,4 @@ const newSchema = new mongoose.Schema({
 
 const collection = mongoose.model('collection', newSchema);
 
-export default collection;
+ex

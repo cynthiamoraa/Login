@@ -1,15 +1,9 @@
-import express from 'express';
+const express ('express');
 const app = express();
-import collection from './mongo.js';
-import cors from 'cors';
+const collection = require('./mongo');
+const cors = require('cors');
 
-app.use (cors());
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5174");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
-  next();
-});
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 

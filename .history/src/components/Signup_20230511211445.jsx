@@ -9,20 +9,19 @@ const Signup = () => {
   async function submit(e) {
     e.preventDefault();
     try {
-      const response = await axio.post("http://localhost:8000/Signup", {
+      const response = await axio.post("http://localhost:5174/Signup", {
         email,password
       })
       if (response.data.message === "User exists") {
-        alert("User exists");
-      } else {
-        navigate("/home", { state: { id: email } });
+        alert()
       }
-
-    }
-    
+      .catch((e) => {
+        alert("Error 2");
+        console.log(e);
+      });
+    } 
     catch (e) {
-      alert("Errrrrrrsgnup");
-      console.log(e.response);
+      console.log(e);
     }
   }
 

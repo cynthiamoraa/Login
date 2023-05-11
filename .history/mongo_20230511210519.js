@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+import 
 mongoose.connect(
   "mongodb+srv://cmoraa734:login@cluster0.yd9noon.mongodb.net/"
 )
